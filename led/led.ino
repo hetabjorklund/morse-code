@@ -6,9 +6,17 @@ void setup() {
 }
 
 void loop() {
+
+  Serial.println("Give a message");
+
+  while (Serial.available() == 0) {
+  }
+
+  String message = Serial.readString();
+
   digitalWrite(ledPin, HIGH);
   delay(5000); // 5 seconds on
   digitalWrite(ledPin, LOW);
   delay(2000); // 2 seconds off
-  Serial.println("Hello world");
+  Serial.println(message);
 }
