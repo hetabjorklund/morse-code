@@ -33,6 +33,21 @@ void loop() {
   
 }
 
+void getSpaceWithInLetter() {
+  digitalWrite(ledPin, LOW);
+  delay(spaceWithinLetter); 
+}
+
+void getSpaceBetweenLetters() {
+  digitalWrite(ledPin, LOW);
+  delay(spaceBetweenLetters);
+}
+
+void getSpaceBetweenWords() {
+  digitalWrite(ledPin, LOW);
+  delay(spaceBetweenWords);
+}
+
 void getLetter(char letter) {
   switch (letter) {
     case 'a':
