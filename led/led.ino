@@ -13,16 +13,22 @@ void setup() {
 
 void loop() {
 
-  Serial.println("Give a message");
+  Serial.println("Write a message: ");
 
   while (Serial.available() == 0) {
   }
 
   String message = Serial.readString();  
 
+  Serial.println(message);  
+
+  for (char letter : message) {
+    Serial.println(letter);
+  }
+  
   digitalWrite(ledPin, HIGH);
   delay(5000); // 5 seconds on
   digitalWrite(ledPin, LOW);
   delay(2000); // 2 seconds off
-  Serial.println(message);
+  
 }
