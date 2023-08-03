@@ -33,6 +33,16 @@ void loop() {
   
 }
 
+void getDot() {
+  digitalWrite(ledPin, HIGH);
+  delay(dotLenght);
+}
+
+void getDash() {
+  digitalWrite(ledPin, HIGH);
+  delay(dashLength);
+}
+
 void getSpaceWithInLetter() {
   digitalWrite(ledPin, LOW);
   delay(spaceWithinLetter); 
