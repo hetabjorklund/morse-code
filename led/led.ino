@@ -102,13 +102,6 @@ void getLetter(char letter) {
         getY();
     case 'z':
         getZ();
-    case 'å':
-        getÅ();
-    case 'ä':
-        getÄ();
-    case 'ö':
-        getÖ();
-  }
 }
 
 void getA() {}
@@ -162,9 +155,3 @@ void getX() {}
 void getY() {}
 
 void getZ() {}
-
-void getÅ() {}
-
-void getÄ() {}
-
-void getÖ() {}
