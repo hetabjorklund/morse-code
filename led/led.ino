@@ -22,6 +22,7 @@ void loop() {
   Serial.println(message);  
 
   for (char letter : message) {
+    Serial.println();
     Serial.println(letter);
 
     if (letter == ' ') {
@@ -32,25 +33,29 @@ void loop() {
     }       
     getSpaceBetweenLetters();
   }
+  Serial.println();
   digitalWrite(ledPin, LOW);
 }
 
 void getDot() {
+  Serial.print(".");
   digitalWrite(ledPin, HIGH);
   delay(dotLenght);
 }
 
 void getDash() {
+  Serial.print("-");
   digitalWrite(ledPin, HIGH);
   delay(dashLength);
 }
 
-void getSpaceWithInLetter() {
+void getSpaceWithinLetter() {
   digitalWrite(ledPin, LOW);
   delay(spaceWithinLetter); 
 }
 
 void getSpaceBetweenLetters() {
+  Serial.print(" ");
   digitalWrite(ledPin, LOW);
   delay(spaceBetweenLetters);
 }
@@ -62,35 +67,35 @@ void getSpaceBetweenWords() {
 
 void getA() {
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
 }
 
 void getB() {
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
 }
 
 void getC() {
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
 }
 
 void getD() {
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
 }   
 
@@ -100,118 +105,118 @@ void getE() {
 
 void getF() {
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
 }
 
 void getG() {
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
 }
 
 void getH() {
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
 }
 
 void getI() {
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
 } 
 
 void getJ() {
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
 }         
 
 void getK() {
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
 }
 
 void getL() {
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
 } 
 
 void getM() {
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
 }
 
 void getN() {
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
 }
 
 void getO() {
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
 }
 
 void getP() {
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
 }
 
 void getQ() {
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
 }
 
 void getR() {
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
 }
 
 void getS() {
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
 } 
 
@@ -221,57 +226,57 @@ void getT() {
 
 void getU() {
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
 }
 
 void getV() {
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
 }
 
 void getW() {
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
 }
 
 void getX() {
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
 }
 
 void getY() {
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
 }
 
 void getZ() {
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDash();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
-  getSpaceWithInLetter();
+  getSpaceWithinLetter();
   getDot();
 }
 
@@ -279,55 +284,81 @@ void getLetter(char letter) {
   switch (letter) {
     case 'a':
         getA();
+        break;
     case 'b':
         getB();
+        break;
     case 'c':
         getC();
+        break;
     case 'd':
-        getD();                          
+        getD();
+        break;                          
     case 'e':   
-        getE();  
+        getE();
+        break;  
     case 'f':
         getF();
+        break;
     case 'g':
         getG();
+        break;
     case 'h':
         getH();
+        break;
     case 'i':
         getI(); 
+        break;
     case 'j':   
-        getJ();         
+        getJ();
+        break;         
     case 'k':
         getK();
+        break;
     case 'l':   
-        getL(); 
+        getL();
+        break; 
     case 'm':   
         getM();
+        break;
     case 'n':
         getN();
+        break;
     case 'o':
         getO();
+        break;
     case 'p':
         getP();
+        break;
     case 'q':
         getQ();
+        break;
     case 'r':   
         getR();
+        break;
     case 's':   
-        getS(); 
+        getS();
+        break; 
     case 't':   
         getT();
+        break;
     case 'u':
         getU();
+        break;
     case 'v':
         getV();
+        break;
     case 'w':
         getW();
+        break;
     case 'x':
         getX();
+        break;
     case 'y':   
         getY();
+        break;
     case 'z':
         getZ();
+        break;
   }
 }
