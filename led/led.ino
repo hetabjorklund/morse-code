@@ -12,29 +12,26 @@ void setup() {
 
 void loop() {
 
+  Serial.println();
   Serial.println("Write a message: ");
 
   while (Serial.available() == 0) {
   }
 
   String message = Serial.readString();  
-
   Serial.println(message);  
 
   for (char letter : message) {
-    Serial.println();
-    Serial.println(letter);
-
     if (letter == ' ') {
       getSpaceBetweenWords();
     }
     else {
       getLetter(letter);
-    }       
-    getSpaceBetweenLetters();
-  }
-  Serial.println();
+      getSpaceBetweenLetters();
+    }           
+  }  
   digitalWrite(ledPin, LOW);
+  Serial.println();  
 }
 
 void getDot() {
@@ -61,6 +58,8 @@ void getSpaceBetweenLetters() {
 }
 
 void getSpaceBetweenWords() {
+  Serial.print(" ");
+  Serial.print(" ");
   digitalWrite(ledPin, LOW);
   delay(spaceBetweenWords);
 }
