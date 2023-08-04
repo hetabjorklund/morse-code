@@ -19,7 +19,15 @@ void loop() {
   }
 
   String message = Serial.readString();  
-  Serial.println(message);  
+  Serial.println(message);
+  
+  for (int i = 0; i < message.length(); i++) {
+    if (!(message[i] >= 'A' && message[i] <= 'z')) {
+      Serial.print("Please only use characters A-Z or numbers 0-9");
+      i = message.length();
+    }
+    continue;
+  }
 
   for (char letter : message) {
     if (letter == ' ') {
