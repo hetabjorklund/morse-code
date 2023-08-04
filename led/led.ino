@@ -281,81 +281,107 @@ void getZ() {
 
 void getLetter(char letter) {
   switch (letter) {
+    case 'A':
     case 'a':
         getA();
         break;
+    case 'B':
     case 'b':
         getB();
         break;
+    case 'C':
     case 'c':
         getC();
         break;
+    case 'D':
     case 'd':
         getD();
         break;                          
+    case 'E':
     case 'e':   
         getE();
         break;  
+    case 'F':
     case 'f':
         getF();
         break;
+    case 'G':
     case 'g':
         getG();
         break;
+    case 'H':
     case 'h':
         getH();
         break;
+    case 'I':
     case 'i':
         getI(); 
         break;
+    case 'J':  
     case 'j':   
         getJ();
         break;         
+    case 'K':
     case 'k':
         getK();
         break;
+    case 'L': 
     case 'l':   
         getL();
         break; 
+    case 'M': 
     case 'm':   
         getM();
         break;
+    case 'N':
     case 'n':
         getN();
         break;
+    case 'O':
     case 'o':
         getO();
         break;
+    case 'P':
     case 'p':
         getP();
         break;
+    case 'Q':
     case 'q':
         getQ();
         break;
+    case 'R': 
     case 'r':   
         getR();
         break;
+    case 'S': 
     case 's':   
         getS();
         break; 
+    case 'T':
     case 't':   
         getT();
         break;
+    case 'U':
     case 'u':
         getU();
         break;
+    case 'V':
     case 'v':
         getV();
         break;
+    case 'W':
     case 'w':
         getW();
         break;
+    case 'X':
     case 'x':
         getX();
         break;
+    case 'Y': 
     case 'y':   
         getY();
         break;
+    case 'Z':
     case 'z':
         getZ();
         break;
