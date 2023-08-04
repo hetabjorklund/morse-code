@@ -12,34 +12,34 @@ void setup() {
 
 void loop() {
 
-  Serial.println();
+start:
   Serial.println("Write a message: ");
 
   while (Serial.available() == 0) {
   }
 
   String message = Serial.readString();  
-  Serial.println(message);
-  
-  for (int i = 0; i < message.length(); i++) {
-    if (!(message[i] >= 'A' && message[i] <= 'z')) {
-      Serial.print("Please only use characters A-Z or numbers 0-9");
-      i = message.length();
-    }
-    continue;
-  }
+  Serial.println(message);  
 
   for (char letter : message) {
-    if (letter == ' ') {
-      getSpaceBetweenWords();
+    if (!(letter >= 'A' && letter <= 'z') && !(letter >= '0' && letter <= '9')) {
+      Serial.println("Please only use characters A-Z or numbers 0-9");
+      Serial.println();      
+      goto start;
     }
     else {
-      getLetter(letter);
-      getSpaceBetweenLetters();
-    }           
-  }  
+      if (letter == ' ') {
+        getSpaceBetweenWords();
+      }
+      else {
+        getLetter(letter);
+        getSpaceBetweenLetters();
+      }           
+    }       
+  } 
   digitalWrite(ledPin, LOW);
   Serial.println();  
+  Serial.println(); 
 }
 
 void getDot() {
