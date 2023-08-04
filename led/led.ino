@@ -279,6 +279,126 @@ void getZ() {
   getDot();
 }
 
+void get0() {
+  getDash();
+  getSpaceWithinLetter();
+  getDash();
+  getSpaceWithinLetter();
+  getDash();
+  getSpaceWithinLetter();
+  getDash();
+  getSpaceWithinLetter();
+  getDash();
+}
+
+void get1() {
+  getDot();
+  getSpaceWithinLetter();
+  getDash();
+  getSpaceWithinLetter();
+  getDash();
+  getSpaceWithinLetter();
+  getDash();
+  getSpaceWithinLetter();
+  getDash();
+}
+
+void get2() {
+  getDot();
+  getSpaceWithinLetter();
+  getDot();
+  getSpaceWithinLetter();
+  getDash();
+  getSpaceWithinLetter();
+  getDash();
+  getSpaceWithinLetter();
+  getDash();
+}
+
+void get3() {
+  getDot();
+  getSpaceWithinLetter();
+  getDot();
+  getSpaceWithinLetter();
+  getDot();
+  getSpaceWithinLetter();
+  getDash();
+  getSpaceWithinLetter();
+  getDash();
+}
+
+void get4() {
+  getDot();
+  getSpaceWithinLetter();
+  getDot();
+  getSpaceWithinLetter();
+  getDot();
+  getSpaceWithinLetter();
+  getDot();
+  getSpaceWithinLetter();
+  getDash();
+}
+
+void get5() {
+  getDot();
+  getSpaceWithinLetter();
+  getDot();
+  getSpaceWithinLetter();
+  getDot();
+  getSpaceWithinLetter();
+  getDot();
+  getSpaceWithinLetter();
+  getDot();
+}
+
+void get6() {
+  getDash();
+  getSpaceWithinLetter();
+  getDot();
+  getSpaceWithinLetter();
+  getDot();
+  getSpaceWithinLetter();
+  getDot();
+  getSpaceWithinLetter();
+  getDot();
+}
+
+void get7() {
+  getDash();
+  getSpaceWithinLetter();
+  getDash();
+  getSpaceWithinLetter();
+  getDot();
+  getSpaceWithinLetter();
+  getDot();
+  getSpaceWithinLetter();
+  getDot();
+}
+
+void get8() {
+  getDash();
+  getSpaceWithinLetter();
+  getDash();
+  getSpaceWithinLetter();
+  getDash();
+  getSpaceWithinLetter();
+  getDot();
+  getSpaceWithinLetter();
+  getDot();
+}
+
+void get9() {
+  getDash();
+  getSpaceWithinLetter();
+  getDash();
+  getSpaceWithinLetter();
+  getDash();
+  getSpaceWithinLetter();
+  getDash();
+  getSpaceWithinLetter();
+  getDot();
+}
+
 void getLetter(char letter) {
   switch (letter) {
     case 'A':
@@ -384,6 +504,36 @@ void getLetter(char letter) {
     case 'Z':
     case 'z':
         getZ();
+        break;
+    case '0':
+        get0();
+        break;
+    case '1':
+        get1();
+        break;
+    case '2':
+        get2();
+        break;
+    case '3':
+        get3();
+        break;
+    case '4':
+        get4();
+        break;
+    case '5':
+        get5();
+        break;
+    case '6':
+        get6();
+        break;
+    case '7':
+        get7();
+        break;
+    case '8':
+        get8();
+        break;
+    case '9':
+        get9();
         break;
   }
 }
