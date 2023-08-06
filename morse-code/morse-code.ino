@@ -25,15 +25,8 @@ start:
     goto start;
   }
 
-  for (char letter : message) {
-    if (letter == ' ') {
-      getSpaceBetweenWords();
-    }
-    else {
-      getLetter(letter);
-      getSpaceBetweenLetters();
-    }                 
-  } 
+  outputMessageInMorse(message);
+
   digitalWrite(ledPin, LOW);
   Serial.println();  
   Serial.println(); 
@@ -48,6 +41,18 @@ bool hasInvalidCharacters(String message) {
     }
     return false;
   }
+}
+
+void outputMessageInMorse(String message) {
+  for (char letter : message) {
+    if (letter == ' ') {
+      getSpaceBetweenWords();
+    }
+    else {
+      getLetter(letter);
+      getSpaceBetweenLetters();
+    }                 
+  } 
 }
 
 void getDot() {
