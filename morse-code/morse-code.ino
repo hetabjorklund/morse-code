@@ -26,10 +26,8 @@ start:
   }
 
   outputMessageInMorse(message);
-
-  digitalWrite(ledPin, LOW);
-  Serial.println();  
-  Serial.println(); 
+  endMessage();
+  
 }
 
 bool hasInvalidCharacters(String message) {
@@ -53,6 +51,12 @@ void outputMessageInMorse(String message) {
       getSpaceBetweenLetters();
     }                 
   } 
+}
+
+void endMessage() {
+  digitalWrite(ledPin, LOW);
+  Serial.println();  
+  Serial.println(); 
 }
 
 void getDot() {
