@@ -21,25 +21,33 @@ start:
   String message = Serial.readString();  
   Serial.println(message);  
 
+  if (hasInvalidCharacters(message)) {
+    goto start;
+  }
+
   for (char letter : message) {
-    if (!(letter >= 'A' && letter <= 'z') && !(letter >= '0' && letter <= '9')) {
-      Serial.println("Please only use characters A-Z or numbers 0-9");
-      Serial.println();      
-      goto start;
+    if (letter == ' ') {
+      getSpaceBetweenWords();
     }
     else {
-      if (letter == ' ') {
-        getSpaceBetweenWords();
-      }
-      else {
-        getLetter(letter);
-        getSpaceBetweenLetters();
-      }           
-    }       
+      getLetter(letter);
+      getSpaceBetweenLetters();
+    }                 
   } 
   digitalWrite(ledPin, LOW);
   Serial.println();  
   Serial.println(); 
+}
+
+bool hasInvalidCharacters(String message) {
+  for (char letter : message) {
+    if (!(letter >= 'A' && letter <= 'z') && !(letter >= '0' && letter <= '9')) {
+      Serial.println("Please only use characters A-Z or numbers 0-9");
+      Serial.println();      
+      return true;
+    }
+    return false;
+  }
 }
 
 void getDot() {
