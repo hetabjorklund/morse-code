@@ -12,7 +12,6 @@ void setup() {
 
 void loop() {
 
-start:
   Serial.println("Write a message: ");
 
   while (Serial.available() == 0) {
@@ -22,7 +21,7 @@ start:
   Serial.println(message);  
 
   if (hasInvalidCharacters(message)) {
-    goto start;
+    return;
   }
 
   outputMessageInMorse(message);
